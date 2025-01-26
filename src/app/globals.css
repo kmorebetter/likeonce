@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-pt-sans: 'PT Sans', system-ui, sans-serif;
+    --font-pt-sans-narrow: 'PT Sans Narrow', system-ui, sans-serif;
+  }
+
+  html {
+    font-family: var(--font-pt-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .font-narrow {
+    font-family: var(--font-pt-sans-narrow);
+  }
+
+  a {
+    @apply text-blue-600 hover:underline;
+  }
+}
+
+.prose {
+  max-width: none;
+}
+
+.prose p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.prose h1 {
+  margin: 0;
+  font-family: var(--font-pt-sans-narrow);
+  line-height: 1.2;
+}
