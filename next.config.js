@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+  // We'll add basePath during deployment
+  // basePath: process.env.NODE_ENV === 'production' ? '/likeonce' : '',
 }
 
 module.exports = nextConfig

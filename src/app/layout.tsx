@@ -1,6 +1,7 @@
 import React from 'react'
 import type { Metadata } from 'next'
 import { PT_Sans, PT_Sans_Narrow } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 
 const ptSans = PT_Sans({ 
@@ -39,6 +40,7 @@ export default function RootLayout({
           </div>
           {children}
         </div>
+        <Analytics />
       </body>
     </html>
   )
